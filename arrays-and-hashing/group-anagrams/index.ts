@@ -1,10 +1,14 @@
-function groupAnagrams(strs) {
-  const hash = new Map();
+function groupAnagrams(strs: string[]) {
+  const hash: Map<string, string[]> = new Map();
 
   for (let str of strs) {
-    const sorted = str.split("").sort().join();
+    let count = Array(26).fill(0);
+    for (const c of str) {
+      count[c.charCodeAt(0) - "a".charCodeAt(0)]++;
+    }
+    let sorted = count.join("#");
     if (hash.has(sorted)) {
-      hash.set(sorted, [...hash.get(sorted), str]);
+      hash.set(sorted, [...(hash.get(sorted) || []), str]);
     } else {
       hash.set(sorted, [str]);
     }

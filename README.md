@@ -14,6 +14,9 @@ All solutions are implemented in **TypeScript** with readable, well-commented co
 - [Two Pointers](./two-pointers)
 - [Sliding Window](./sliding-window)
 - [Backtracking](./backtracking)
+- [1D Dynamic Programming](./dynamic-programming-1d/)
+- [Heap](./heap/)
+- [Graph](./graph/)
 
 ### More to Come!
 
